@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyDevSkills</title>
+</head>
+<body>
+    <a href="/devskills">Home</a>
+    <div>
+        <h1>Deveveloper Skills</h1>
+        <ul>
+        <% devskills.forEach(function(t) { %>
+            <li>
+            <%= '#'+t.id %>
+            <form action="/devskills/<%= t.id %>?_method=DELETE"
+                method="POST" class="delete-form"  
+              >
+                <button type="submit">X</button>
+              </form>
+            <a href="/devskills/<%= t.id %>"><%= t.skill %></a></br>
+            <%= 'Level: ' + t.level%>
+            </li>
+        <% }); %>
+        </ul>
+    </div>
+    <a href="/devskills/new">Add Skill</a>
+</body>
+</html>

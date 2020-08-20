@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <title>MyDevSkills</title>
+</head>
+<body>
+  <a href="/">Home</a> | <a href="/devskills">Skill List</a>
+  <h1>Skill #: <%= skill.id %></h1>
+  <h3>Skill: <%= skill.skill %></h3>
+  <h3>Level: <%= skill.level %></h3>
+  <a href="/devskills/<%= skill.id %>/edit">Edit Skill</a>
+  <a href="/devskills">Home</a>
+</body>
+</html>
